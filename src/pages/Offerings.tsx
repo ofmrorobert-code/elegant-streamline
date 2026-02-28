@@ -27,12 +27,11 @@ const offerings = [
 
 const Offerings = () => (
   <Layout>
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24" aria-label="Services offered">
       <div className="container mx-auto px-6">
         <h1 className="font-serif text-5xl md:text-7xl italic text-center mb-20">offerings</h1>
 
-        {/* Decorative image row */}
-        <div className="flex justify-center gap-6 mb-24">
+        <div className="flex justify-center gap-6 mb-24" aria-hidden="true">
           <div className="w-48 h-64 rounded-[45%_45%_45%_45%] bg-secondary overflow-hidden relative">
             <div className="w-full h-full bg-muted flex items-center justify-center">
               <span className="text-muted-foreground text-xs font-sans">Photo</span>
@@ -48,11 +47,10 @@ const Offerings = () => (
           <div className="hidden md:block w-16 h-8 rounded-t-full bg-light-sage/40 self-end mb-8" />
         </div>
 
-        {/* Offering cards */}
         <div className="space-y-20 max-w-4xl mx-auto">
           {offerings.map((item, i) => (
             <article key={i} className="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-8 items-start">
-              <div className="flex justify-center">
+              <div className="flex justify-center" aria-hidden="true">
                 <div className={`w-20 h-20 ${item.accent} ${item.shape}`} />
               </div>
               <div>
