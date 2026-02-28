@@ -17,10 +17,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <header className="pt-10 pb-4">
         <div className="text-center mb-6">
           <Link to="/" className="inline-block">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold leading-[0.95] tracking-tight">
+            <span className="font-serif text-4xl md:text-5xl font-bold leading-[0.95] tracking-tight">
               Julia<br />Jarrold
               <span className="text-lg md:text-xl font-medium tracking-wide">, LCSW</span>
-            </h2>
+            </span>
           </Link>
         </div>
         <nav aria-label="Main navigation" className="flex justify-center gap-8 md:gap-12 font-serif text-base md:text-lg">

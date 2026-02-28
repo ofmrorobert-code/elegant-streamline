@@ -24,7 +24,7 @@ const pricingItems = [
 
 const Pricing = () => (
   <Layout>
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24" aria-label="Pricing information">
       <div className="container mx-auto px-6 max-w-3xl">
         <h1 className="font-serif text-5xl md:text-7xl italic text-center mb-6">pricing</h1>
         <p className="text-center text-muted-foreground mb-16 max-w-xl mx-auto">
@@ -33,10 +33,7 @@ const Pricing = () => (
 
         <div className="space-y-12">
           {pricingItems.map((item, i) => (
-            <article
-              key={i}
-              className="border-b border-border pb-10 last:border-b-0"
-            >
+            <article key={i} className="border-b border-border pb-10 last:border-b-0">
               <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-3">
                 <h2 className="font-serif text-2xl md:text-3xl">{item.title}</h2>
                 <span className="font-serif text-2xl md:text-3xl text-accent">{item.rate}</span>
