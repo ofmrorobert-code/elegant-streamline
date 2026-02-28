@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { useParams } from "next/navigation";
 import Layout from "@/components/Layout";
 import { articles } from "@/app/blog/page";
 
@@ -12,19 +13,14 @@ const loremSections = [
   "There is no single path to healing. Some people find stillness through movement — yoga, walking, dance. Others find it through writing, art, or simply sitting with a cup of tea. The practice matters less than the presence we bring to it.",
 ];
 
-interface PageProps {
-  params: Promise<{ slug: string }>;
-}
-
-export async function generateStaticParams() {
-  return articles.map((a) => ({ slug: a.slug }));
-}
-
-export default async function BlogArticle({ params }: PageProps) {
-  const { slug } = await params;
+export default function BlogArticle() {
+  const params = useParams();
+  const slug = params.slug as string;
   const article = articles.find((a) => a.slug === slug);
 
-  if (!article) notFound();
+  if (!article) {
+    notFound();
+  }
 
   return (
     <Layout>
