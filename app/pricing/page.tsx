@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Layout from "@/components/Layout";
 
 const pricingItems = [
@@ -46,7 +46,7 @@ const Pricing = () => (
 
         <div className="text-center mt-16">
           <Link
-            to="/contact"
+            href="/contact"
             className="inline-block border border-foreground/40 rounded-full px-10 py-3 text-sm font-sans uppercase tracking-widest hover:bg-foreground hover:text-primary-foreground transition-colors"
           >
             Get in Touch

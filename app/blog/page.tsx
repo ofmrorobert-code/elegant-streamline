@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Layout from "@/components/Layout";
 
 export const articles = [
@@ -46,7 +46,7 @@ const Blog = () => (
           {articles.map((article) => (
             <Link
               key={article.slug}
-              to={`/blog/${article.slug}`}
+              href={`/blog/${article.slug}`}
               className="group block"
             >
               <article className={`${article.accent} ${article.shape} p-10 md:p-12 transition-transform duration-300 group-hover:scale-[1.02]`}>

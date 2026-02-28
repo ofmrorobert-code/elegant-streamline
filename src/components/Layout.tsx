@@ -1,4 +1,7 @@
-import { Link, useLocation } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -10,13 +13,13 @@ const navLinks = [
 ];
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const { pathname } = useLocation();
+  const pathname = usePathname();
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="pt-10 pb-4">
         <div className="text-center mb-6">
-          <Link to="/" className="inline-block">
+          <Link href="/" className="inline-block">
             <span className="font-serif text-4xl md:text-5xl font-bold leading-[0.95] tracking-tight">
               Julia<br />Jarrold
               <span className="text-lg md:text-xl font-medium tracking-wide">, LCSW</span>
@@ -27,7 +30,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           {navLinks.map(({ to, label }) => (
             <Link
               key={to}
-              to={to}
+              href={to}
               className={`transition-opacity hover:opacity-70 pb-1 ${
                 pathname === to ? "border-b border-foreground" : ""
               }`}

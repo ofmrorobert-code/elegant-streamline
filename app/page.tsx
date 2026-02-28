@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Layout from "@/components/Layout";
 
 const Index = () => (
@@ -22,13 +22,13 @@ const Index = () => (
         <div className="max-w-lg">
           <p className="font-serif text-2xl md:text-3xl italic mb-4">Hi there,</p>
           <h1 className="font-serif text-2xl md:text-3xl leading-relaxed mb-8">
-            I'm a licensed psychotherapist in New York City, committed to delivering high-quality, trauma-informed mental health care.
+            {"I'm a licensed psychotherapist in New York City, committed to delivering high-quality, trauma-informed mental health care."}
           </h1>
           <Link
-            to="/contact"
+            href="/contact"
             className="inline-block border border-foreground/40 rounded-full px-10 py-3 text-sm font-sans uppercase tracking-widest hover:bg-foreground hover:text-primary-foreground transition-colors"
           >
-            Let's Connect
+            {"Let's Connect"}
           </Link>
         </div>
       </div>
@@ -41,7 +41,7 @@ const Index = () => (
           Everything we need to heal ourselves already exists within us; but, sometimes we can struggle to connect with ourselves. Our work will help you to find self trust and to lean in to the wisdom and resilience that has guided you through every moment of life so far.
         </blockquote>
         <Link
-          to="/about"
+          href="/about"
           className="inline-block mt-10 text-sm font-sans uppercase tracking-widest border-b border-foreground/40 pb-1 hover:opacity-70 transition-opacity"
         >
           Learn More

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Layout from "@/components/Layout";
 
@@ -24,7 +26,7 @@ const Contact = () => {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div>
-            <h1 className="font-serif text-4xl md:text-6xl italic mb-6">Let's work together</h1>
+            <h1 className="font-serif text-4xl md:text-6xl italic mb-6">{"Let's work together"}</h1>
             <p className="text-base text-muted-foreground mb-2">
               I am currently accepting new clients. Please submit your information in the form below.
             </p>

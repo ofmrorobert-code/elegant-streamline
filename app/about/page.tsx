@@ -24,10 +24,10 @@ const About = () => (
             I will hold space for you to express curiosity towards yourself, to get to know and unburden the parts of yourself that you want to understand and ultimately heal by connecting to your own resilience.
           </p>
 
-          <h2 className="font-serif text-2xl mb-4">Training & Education</h2>
+          <h2 className="font-serif text-2xl mb-4">Training &amp; Education</h2>
 
           <p className="text-base leading-relaxed mb-6 text-muted-foreground">
-            I have a Master's in Social Work from Columbia University and have completed post graduate trauma training from the Institute for Contemporary Psychotherapy. I am level 1 trained in Internal Family Systems Therapy (IFS) and Eye Movement Desensitization and Reprocessing Therapy (EMDR).
+            {"I have a Master's in Social Work from Columbia University and have completed post graduate trauma training from the Institute for Contemporary Psychotherapy. I am level 1 trained in Internal Family Systems Therapy (IFS) and Eye Movement Desensitization and Reprocessing Therapy (EMDR)."}
           </p>
 
           <p className="text-base leading-relaxed text-muted-foreground">
